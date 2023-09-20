@@ -42,10 +42,7 @@ fn main() {
     {
         if element_vector_ofPresons.len() >= 2
         {
-            for iter_personname in element_personname
-            {
-                println!("{}", iter_personname);
-            }
+            println!("{}", element_vector_ofPresons);
         }
         if l_counter_blanklines < l_num_totalfingers - 1
         {
