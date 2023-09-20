@@ -38,17 +38,19 @@ fn main() {
     let l_num_totalfingers = person_databank.len();
 
     let mut l_counter_blanklines = 0;
-    for (_element_fingerprint, element_personname) in &person_databank
+    for (_element_fingerprint, element_vector_ofPresons) in &person_databank
     {
-       for iter_personname in element_personname
-       {
-            println!("{}", iter_personname);
-       }
-       if l_counter_blanklines < l_num_totalfingers - 1
-       {
+        if element_vector_ofPresons.len() >= 2
+        {
+            for iter_personname in element_personname
+            {
+                println!("{}", iter_personname);
+            }
+        }
+        if l_counter_blanklines < l_num_totalfingers - 1
+        {
             l_counter_blanklines += 1;
             println!("");
-       }
-
+        }
     }
 }
