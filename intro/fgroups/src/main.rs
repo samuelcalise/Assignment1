@@ -35,19 +35,29 @@ fn main() {
         }
     }
 
-    let l_num_totalfingers = person_databank.len();
+    //A Vector, of Tuples, which the first element is the fingerprint, names associated with fingerprint
+    let mut printing_fingerprint_groups: Vec<(String, Vec<String>)> = Vec::new();
 
-    let mut l_counter_blanklines = 0;
-    for (_element_fingerprint, element_vector_ofPresons) in &person_databank
+    for (element_fingerprint, person_names) in &person_databank
     {
-        if element_vector_ofPresons.len() >= 2
+        if person_names.len() >= 2
         {
-            println!("{}", element_vector_ofPresons);
+            printing_fingerprint_groups.push( (element_fingerprint.clone(), person_names.clone()) );
         }
-        if l_counter_blanklines < l_num_totalfingers - 1
+    }
+
+    let mut newline_counter =  0;
+
+    for (_, names) in &printing_fingerprint_groups
+    {
+        for name_element in names
         {
-            l_counter_blanklines += 1;
-            println!("");
+            println!("{}", name_element);
+        }
+        if newline_counter != printing_fingerprint_groups.len()-1
+        {
+            println!();
+            newline_counter += 1;
         }
     }
 }
