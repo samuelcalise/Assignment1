@@ -1,5 +1,7 @@
 # assignment1
-
+<p>Sam Calise and Claudia Deverdits</p>
+<p>We had help from multiple TAs of the course to correctly implement both brightness and fgroups.</p>
+<p>We spent approximately 4 days working on the assignment.</p>
 
 ## Part C
 
